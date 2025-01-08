@@ -36,6 +36,12 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   google_fonts: ^6.2.1
+  carousel_slider: ^5.0.0
+  smooth_page_indicator: ^1.2.0+3
+  lottie: ^3.1.3
+  sqflite: ^2.4.1
+  path: ^1.8.0
+  intl: ^0.20.0
 
 dev_dependencies:
   flutter_test:
@@ -62,7 +68,13 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
      - assets/images/sb.jpg
-
+     - assets/json/Animate.json
+     - assets/images/bg1.jpg
+     - assets/images/bg2.png
+     - assets/images/card1.png
+     - assets/images/card2.jpg
+     - assets/images/card3.jpeg
+     - assets/images/reg.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

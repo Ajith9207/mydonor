@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../info/information.dart';
+import 'mysignup.dart';
+
 class LoginScreen extends StatelessWidget {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
@@ -59,6 +62,7 @@ class LoginScreen extends StatelessWidget {
                       filled: true,
                       fillColor: Colors.white,
                       hintText: 'Username',
+                      prefixIcon: Icon(Icons.person),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
                         borderSide: BorderSide.none,
@@ -81,6 +85,7 @@ class LoginScreen extends StatelessWidget {
                       filled: true,
                       fillColor: Colors.white,
                       hintText: 'Password',
+                      prefixIcon: Icon(Icons.lock_outline),
                       suffixIcon: Icon(Icons.visibility_off),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
@@ -128,7 +133,11 @@ class LoginScreen extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
-                        // If the form is valid, perform login action
+                        {
+                          Navigator.push(context,MaterialPageRoute(builder: (BuildContext context) {
+                            return BloodDonationApp();
+                          }) );
+                        }
                         print('Form is valid');
                       }
                     },
@@ -160,9 +169,13 @@ class LoginScreen extends StatelessWidget {
                           style: TextStyle(color: Colors.white),
                         ),
                         TextButton(
-                          onPressed: () {},
+                          onPressed:() {
+                         Navigator.push(context,MaterialPageRoute(builder: (BuildContext context) {
+                         return SignInPage();
+                        }) );
+                          },
                           child: Text(
-                            'Sign up',
+                            'Sign Up',
                             style: TextStyle(color: Colors.white),
                           ),
                         ),
